@@ -17,7 +17,7 @@
 > 对称加密算法：（操作二进制）
 > AES比DES高级一点
 
-> DES：
+## DES：
 > （加密）
 * 1、
 ```
@@ -52,7 +52,7 @@ cipher.init(Cipher.DECRYPT_MODE,key);
 cipher.doFinal(input);  (input  需要解密字符串的字符数组)
 ```
 
-> AES：
+## AES：
 > （加密）
 * 1、
 ```
@@ -86,7 +86,7 @@ cipher.doFinal(input);  (input  需要解密字符串的字符数组)
 * 加密/解密为了避免中文乱码，需要使用base64编码和解码
 * DES和AES区别：DES需要8位密钥，而AES需要16位；
 
-> 工作模式：
+## 工作模式：
 > ECB （电子密码本）：并行加密
 > CBC（密码分组链接）：串行加密  ，需要在init方法添加额外参数：cipher.init(Cipher.ENCRYPT_MODE, keySpec，IvParameterSpec(new Byte[])); 
 
@@ -116,7 +116,7 @@ val privateKey = kf.generatePrivate(PKCS8EncodeKeySpec(privateKeyStr))
 val publicKey = kf.generatePublic(X509EncodeKeySpec(publicKeyStr))
 ```
 
-> 消息摘要：
+## 消息摘要：
 > MD5：
 ```
 val digest = MessageDigest.getInstance("MD5")
@@ -153,7 +153,7 @@ val digest = MessageDigest.getInstance("SHA-256")
 //转16进制后 64个字节
 ```
 
-> 数字签名：
+## 数字签名：
 ```
 val signature = Signature.getInstance("SHA256withRSA")
 signature.initSign(privateKey)  //  privateKey / publicKey  密钥/公钥
