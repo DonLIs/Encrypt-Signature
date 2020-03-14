@@ -91,7 +91,7 @@ cipher.doFinal(input);  (input  需要解密字符串的字符数组)
 > CBC（密码分组链接）：串行加密  ，需要在init方法添加额外参数：cipher.init(Cipher.ENCRYPT_MODE, keySpec，IvParameterSpec(new Byte[])); 
 
 
-> 非对称加密
+## 非对称加密
 > RSA：公钥加密，私钥解密；私钥加密，公钥解密
 
 * 生成密钥对：
