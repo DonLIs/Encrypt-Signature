@@ -75,7 +75,7 @@ val cipher = Cipher.getInstance("AES");
 ```
 * 2、
 ```
-val keySpec = SecretKeySpec(new Byte[],"AES");   (Byte[] 是加密钥匙，需要8位字符)
+val keySpec = SecretKeySpec(new Byte[],"AES");   (Byte[] 是加密钥匙，需要16位字符)
 cipher.init(Cipher.DECRYPT_MODE, keySpec );
 ```
 * 3、
