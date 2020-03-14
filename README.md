@@ -97,7 +97,7 @@ cipher.doFinal(input);  (input  需要解密字符串的字符数组)
 * 生成密钥对：
 ```
 val generator = KeyPairGenerator.getInstance("RSA")
-val keyPair = generator.getKeyPair()
+val keyPair = generator.genKeyPair()
 val publicKey = keyPair .public
 val privateKey = keyPair .private
 ```
